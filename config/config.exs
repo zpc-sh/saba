@@ -99,7 +99,7 @@ config :spark,
 config :saba,
   ecto_repos: [Saba.Repo],
   generators: [timestamp_type: :utc_datetime],
-  ash_domains: [Saba.Ledger, Saba.Accounts],
+  ash_domains: [Saba.Ledger, Saba.Accounts, Saba.Sabha],
   ash_authentication: [return_error_on_invalid_magic_link_token?: true]
 
 # Configure the endpoint

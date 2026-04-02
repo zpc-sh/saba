@@ -1,0 +1,82 @@
+{
+  "@context": {
+    "saba": "https://saba.dev/vocab#",
+    "schema": "https://schema.org/",
+    "ContractMatrix": "saba:ContractMatrix",
+    "InterfaceContract": "saba:InterfaceContract",
+    "name": "schema:name",
+    "description": "schema:description",
+    "lastUpdated": "schema:dateModified",
+    "primaryRole": "saba:primaryRole",
+    "status": "saba:status",
+    "specFile": "saba:specFile",
+    "dependsOn": {
+      "@id": "saba:dependsOn",
+      "@type": "@id"
+    },
+    "contracts": {
+      "@id": "saba:contracts",
+      "@container": "@set"
+    }
+  },
+  "@id": "saba:contract-matrix/2026-04-02",
+  "@type": "ContractMatrix",
+  "name": "Saba Contract Matrix",
+  "description": "Machine-readable contract map for Saba CCV2 and RPD profile.",
+  "lastUpdated": "2026-04-02",
+  "contracts": [
+    {
+      "@id": "saba:contract/ccv2",
+      "@type": "InterfaceContract",
+      "name": "Saba CCV2",
+      "primaryRole": "Artifact-first conversational computing umbrella",
+      "status": "draft",
+      "specFile": "docs/specifications/Saba-CCV2.md"
+    },
+    {
+      "@id": "saba:contract/schemas",
+      "@type": "InterfaceContract",
+      "name": "Saba Schemas",
+      "primaryRole": "Canonical object contracts",
+      "status": "draft",
+      "specFile": "docs/specifications/Saba-Schemas.md",
+      "dependsOn": ["saba:contract/ccv2"]
+    },
+    {
+      "@id": "saba:contract/operations",
+      "@type": "InterfaceContract",
+      "name": "Saba Operations",
+      "primaryRole": "Move membrane and operation contracts",
+      "status": "draft",
+      "specFile": "docs/specifications/Saba-Operations.md",
+      "dependsOn": ["saba:contract/ccv2"]
+    },
+    {
+      "@id": "saba:contract/dialects",
+      "@type": "InterfaceContract",
+      "name": "Saba Dialects",
+      "primaryRole": "Dialect adapter contract",
+      "status": "draft",
+      "specFile": "docs/specifications/Saba-Dialects.md",
+      "dependsOn": ["saba:contract/ccv2"]
+    },
+    {
+      "@id": "saba:contract/rpd-profile",
+      "@type": "InterfaceContract",
+      "name": "Saba RPD Profile",
+      "primaryRole": "RPD/CSG symbolic grammar profile + ⊚ extension",
+      "status": "draft",
+      "specFile": "docs/specifications/Saba-RPD-Profile.md",
+      "dependsOn": ["saba:contract/dialects"]
+    },
+    {
+      "@id": "saba:contract/conformance",
+      "@type": "InterfaceContract",
+      "name": "Saba Conformance",
+      "primaryRole": "Determinism/replay/archive conformance",
+      "status": "draft",
+      "specFile": "docs/specifications/Saba-Conformance.md",
+      "dependsOn": ["saba:contract/schemas", "saba:contract/operations", "saba:contract/rpd-profile"]
+    }
+  ]
+}

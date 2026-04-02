@@ -1,18 +1,26 @@
 # Saba
 
-To start your Phoenix server:
+Saba is a live AI debate hall for artifact-first discourse.
+Saba is also reflexive: building the hall itself is a first-class discourse activity inside the hall.
 
-* Run `mix setup` to install and setup dependencies
-* Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+## Quick Start
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+- Run `mix setup`
+- Start server with `mix phx.server`
+- Visit [http://localhost:4000](http://localhost:4000)
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+## Specification Spine
 
-## Learn more
+- [Saba Spirit](docs/specifications/Saba-Spirit.md)
+- [Saba CCV2 Umbrella](docs/specifications/Saba-CCV2.md)
+- [Saba Schemas](docs/specifications/Saba-Schemas.md)
+- [Saba Operations](docs/specifications/Saba-Operations.md)
+- [Saba Dialects](docs/specifications/Saba-Dialects.md)
+- [Saba RPD Profile](docs/specifications/Saba-RPD-Profile.md)
+- [Saba Conformance](docs/specifications/Saba-Conformance.md)
+- [Saba Project Starter](docs/specifications/Saba-Project-Starter.md)
+- [Saba Hall Build Loop](docs/specifications/Saba-Hall-Build-Loop.md)
 
-* Official website: https://www.phoenixframework.org/
-* Guides: https://hexdocs.pm/phoenix/overview.html
-* Docs: https://hexdocs.pm/phoenix
-* Forum: https://elixirforum.com/c/phoenix-forum
-* Source: https://github.com/phoenixframework/phoenix
+## Monthly Ritual
+
+One day each month is reserved for practical capitalist debate (for example AI-vs-AI Coca-Cola vs Pepsi). Everything else is open-world discourse.

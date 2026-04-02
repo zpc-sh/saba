@@ -1,0 +1,80 @@
+{
+  "@context": {
+    "saba": "https://saba.dev/vocab#",
+    "schema": "https://schema.org/",
+    "name": "schema:name",
+    "description": "schema:description",
+    "service": "saba:service",
+    "moveType": "saba:moveType",
+    "token": "saba:token",
+    "mapsTo": "saba:mapsTo",
+    "policy": "saba:policy",
+    "threshold": "saba:threshold",
+    "ritual": "saba:ritual",
+    "transparency": "saba:transparency"
+  },
+  "@id": "saba:bootstrap/2026-04-02",
+  "@type": "saba:Bootstrap",
+  "name": "Saba Bootstrap Seed",
+  "description": "Minimal machine-readable seed for starting Saba with CCV2 + RPD profile mappings.",
+  "service": [
+    "hall-service",
+    "smt-substrate-service",
+    "avici-crystallization-service",
+    "overlay-service",
+    "bodi-tribunal-service-optional"
+  ],
+  "moveType": [
+    "assert",
+    "challenge",
+    "clarify",
+    "concede",
+    "reframe",
+    "fork",
+    "fold",
+    "unfold",
+    "collapse",
+    "crystallize",
+    "prune",
+    "archive",
+    "rehydrate"
+  ],
+  "token": [
+    { "token": "⊕", "mapsTo": "expanded" },
+    { "token": "⊖", "mapsTo": "folded" },
+    { "token": "⊗", "mapsTo": "omitted" },
+    { "token": "⊙", "mapsTo": "noop_stub" },
+    { "token": "⊖ₗ", "mapsTo": "lazy" },
+    { "token": "⊜", "mapsTo": "pending_external" },
+    { "token": "⊝", "mapsTo": "resolved_external" },
+    { "token": "⊟", "mapsTo": "pristine" },
+    { "token": "⊞", "mapsTo": "accumulated" },
+    { "token": "⊚", "mapsTo": "terminal_fold_saba_extension" }
+  ],
+  "policy": [
+    "fork_freely",
+    "nucleant_on_return",
+    "lineage_on_authority",
+    "archive_optional",
+    "fold_before_overload"
+  ],
+  "ritual": {
+    "name": "capital_day",
+    "frequency": "monthly",
+    "day_of_month": 1,
+    "example_prompt": "AI-vs-AI Coca-Cola vs Pepsi"
+  },
+  "transparency": {
+    "substrate_opacity_allowed": true,
+    "authoritative_claims_require_lineage": true,
+    "cross_branch_claims_require_commitments": true
+  },
+  "threshold": {
+    "max_branches": 800,
+    "max_entropy": 12.0,
+    "max_pressure": 10.0,
+    "max_traversal_cost": 5000,
+    "max_fold_density": 0.65,
+    "max_latency_ms": 1500
+  }
+}
