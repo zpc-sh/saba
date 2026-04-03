@@ -59,11 +59,33 @@ defmodule Saba.Sabha.Session do
       argument(:tree_id, :string, allow_nil?: false)
       filter(expr(tree_id == ^arg(:tree_id)))
     end
+
+    read :list_live do
+      filter(expr(status == :live))
+    end
+
+    read :list_ended do
+      filter(expr(status == :ended))
+    end
+
+    read :list_archived do
+      filter(expr(status == :archived))
+    end
+
+    read :by_id do
+      argument(:id, :string, allow_nil?: false)
+      get?(true)
+      filter(expr(id == ^arg(:id)))
+    end
   end
 
   code_interface do
     define(:create)
     define(:set_status)
     define(:by_tree, args: [:tree_id])
+    define(:list_live)
+    define(:list_ended)
+    define(:list_archived)
+    define(:by_id, args: [:id])
   end
 end

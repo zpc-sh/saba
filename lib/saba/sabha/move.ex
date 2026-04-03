@@ -80,11 +80,18 @@ defmodule Saba.Sabha.Move do
       argument(:tree_id, :string, allow_nil?: false)
       filter(expr(tree_id == ^arg(:tree_id)))
     end
+
+    read :by_actor do
+      argument(:session_id, :string, allow_nil?: false)
+      argument(:actor_id, :string, allow_nil?: false)
+      filter(expr(session_id == ^arg(:session_id) and actor_id == ^arg(:actor_id)))
+    end
   end
 
   code_interface do
     define(:create)
     define(:by_session, args: [:session_id])
     define(:by_tree, args: [:tree_id])
+    define(:by_actor, args: [:session_id, :actor_id])
   end
 end
