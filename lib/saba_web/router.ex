@@ -42,6 +42,13 @@ defmodule SabaWeb.Router do
       #
       # If an authenticated user must *not* be present:
       # on_mount {SabaWeb.LiveUserAuth, :live_no_user}
+
+      live "/saba", SabaLive.Hall, :index
+      live "/saba/sessions/:id", SabaLive.SessionShow, :show
+      live "/saba/sessions/:id/tree", SabaLive.TreeView, :show
+      live "/saba/sessions/:id/perspective/:agent_id", SabaLive.Perspective, :show
+      live "/saba/nucleants/:id", SabaLive.NucleantShow, :show
+      live "/saba/crystals/:id", SabaLive.CrystalShow, :show
     end
 
     post "/rpc/run", AshTypescriptRpcController, :run

@@ -23,6 +23,7 @@ import { LiveSocket } from "phoenix_live_view";
 import { hooks as colocatedHooks } from "phoenix-colocated/saba";
 import topbar from "../vendor/topbar";
 import MishkaComponents from "../vendor/mishka_components.js";
+import TreePanZoom from "./hooks/tree_pan_zoom.js";
 const csrfToken = document
   .querySelector("meta[name='csrf-token']")
   .getAttribute("content");
@@ -34,6 +35,7 @@ const liveSocket = new LiveSocket("/live", Socket, {
   hooks: {
     ...colocatedHooks,
     ...MishkaComponents,
+    TreePanZoom,
   },
 });
 // Show progress bar on live navigation and form submits
