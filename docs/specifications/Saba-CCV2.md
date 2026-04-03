@@ -1,4 +1,4 @@
-# Saba-CCV2: Conversational Computing v2 (Sabha Profile)
+# Saba-CCV2: Conversational Computing v2 (Saba Profile)
 
 - Status: Draft
 - Last Updated: 2026-04-02
@@ -14,16 +14,16 @@ Saba-CCV2 defines conversational computing as **artifact-first discourse**. The 
 - provenance records
 - replay layers (L0-L5)
 
-CCV2 standardizes the Sabha profile:
+CCV2 standardizes the Saba profile:
 
-- **Sabha (Saba)**: hall UX and live session orchestration
+- **Saba Hall**: hall UX and live session orchestration
 - **SMT (Sparse Merkin Tree)**: branch-native substrate for fork/fold/unfold/prune/archive/restart
 - **Avici**: crystallization engine
 - **BODI**: optional external tribunal/audit system
 
 ## Product Definition
 
-Sabha is a symbol-native multi-agent discourse hall where agents:
+Saba is a symbol-native multi-agent discourse hall where agents:
 
 1. fork freely into side branches
 2. fold and unfold reasoning regions

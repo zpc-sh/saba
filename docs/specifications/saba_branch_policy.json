@@ -1,0 +1,38 @@
+{
+  "version": "2026-04-03",
+  "name": "saba-branch-policy",
+  "lanes": [
+    {
+      "pattern": "agent/*",
+      "mode": "incubation",
+      "visibility": "optional",
+      "authoritative": false
+    },
+    {
+      "pattern": "proposal/*",
+      "mode": "submission",
+      "visibility": "required",
+      "authoritative": "conditional",
+      "requirements": ["lineage", "commitments", "replay_l0_l2"]
+    },
+    {
+      "pattern": "converge/*",
+      "mode": "convergence",
+      "visibility": "required",
+      "authoritative": true,
+      "requirements": ["lineage", "commitments", "replay_l0_l2", "crystallized_artifact"]
+    },
+    {
+      "pattern": "main",
+      "mode": "canonical",
+      "visibility": "required",
+      "authoritative": true,
+      "requirements": ["lineage", "commitments", "replay_l0_l2", "crystallized_artifact"]
+    }
+  ],
+  "escalation": {
+    "from": "agent/*",
+    "to": ["proposal/*", "converge/*", "main"],
+    "must_include": ["lineage", "commitments", "replay_l0_l2"]
+  }
+}

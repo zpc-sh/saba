@@ -1,4 +1,4 @@
-# Saba-Sabha-Operations: Operation and Service Contracts
+# Saba-Operations: Operation and Service Contracts
 
 - Status: Draft
 - Last Updated: 2026-04-02
@@ -7,7 +7,7 @@
 
 ## Summary
 
-This document defines the operation membrane for the Sabha profile:
+This document defines the operation membrane for the Saba profile:
 
 1. typed move semantics
 2. tree and branch operations

@@ -1,4 +1,4 @@
-# Saba-Sabha-Conformance: Test and Conformance Plan
+# Saba-Conformance: Test and Conformance Plan
 
 - Status: Draft
 - Last Updated: 2026-04-02
@@ -7,7 +7,7 @@
 
 ## Summary
 
-This document defines conformance checks for Conversational Computing v2 (Sabha profile).
+This document defines conformance checks for Conversational Computing v2 (Saba profile).
 
 ## 1) Commitment Determinism
 
@@ -115,3 +115,15 @@ Conformance reports SHOULD include:
 3. policy snapshot
 4. pass/fail per suite and per invariant
 5. reproducibility metadata (seeds, run IDs, timestamps)
+
+## 8) Seed Vectors
+
+The starter vector set lives in:
+
+- [saba_conformance_vectors.json](./saba_conformance_vectors.json)
+
+Minimum required vectors:
+
+1. `⊚` terminal-fold mapping to canonical fold payload
+2. `⊖ -> ⊕` unfold transition legality
+3. archive/restart invariance under fixed seed + policy + adapter versions

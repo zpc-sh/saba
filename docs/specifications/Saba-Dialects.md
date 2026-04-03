@@ -1,4 +1,4 @@
-# Saba-Sabha-Dialects: Dialect Adapter Contract
+# Saba-Dialects: Dialect Adapter Contract
 
 - Status: Draft
 - Last Updated: 2026-04-02
@@ -7,7 +7,7 @@
 
 ## Summary
 
-Sabha supports multiple AI-native reasoning styles ("dialects") while preserving a single interoperable canonical layer.
+Saba supports multiple AI-native reasoning styles ("dialects") while preserving a single interoperable canonical layer.
 
 The contract is:
 

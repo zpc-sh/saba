@@ -1,4 +1,4 @@
-# Saba-Sabha-RPD-Profile: RPD/CSG Symbol Grammar Profile
+# Saba-RPD-Profile: RPD/CSG Symbol Grammar Profile
 
 - Status: Draft
 - Last Updated: 2026-04-02
@@ -7,7 +7,7 @@
 
 ## Summary
 
-This document defines the Saba/Sabha RPD grammar profile used by CCV2 dialect adapters.
+This document defines the Saba RPD grammar profile used by CCV2 dialect adapters.
 
 It aligns with RPD and Crystal State Grammar (CSG) and adds one Saba-native extension token:
 

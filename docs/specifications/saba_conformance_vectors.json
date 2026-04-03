@@ -1,0 +1,59 @@
+{
+  "version": "2026-04-02",
+  "profile": "saba-ccv2",
+  "vectors": [
+    {
+      "id": "token-terminal-fold-oplus",
+      "name": "Terminal fold token maps to canonical fold move",
+      "input": {
+        "token": "⊚",
+        "target_ref": "b_demo_01",
+        "dialect": "rpd-csg"
+      },
+      "expected": {
+        "move_type": "fold",
+        "payload": {
+          "mode": "fold_down",
+          "terminal": true,
+          "target_ref": "b_demo_01"
+        },
+        "resulting_csg_state": "⊖∅⊞⊠"
+      }
+    },
+    {
+      "id": "state-folded-to-expanded",
+      "name": "Unfold transition from folded to expanded remains legal",
+      "input": {
+        "from_state": "⊖∅⊞⊠",
+        "move_type": "unfold",
+        "selector": {
+          "depth": 2
+        }
+      },
+      "expected": {
+        "to_state": "⊕∅⊞⊠",
+        "transition_legal": true
+      }
+    },
+    {
+      "id": "archive-restart-invariance",
+      "name": "Equivalent seeds and policy produce equivalent commitment class",
+      "input": {
+        "seeds": ["u_seed_01", "u_seed_02"],
+        "policy": {
+          "max_branches": 800,
+          "max_entropy": 12.0,
+          "max_pressure": 10.0,
+          "max_traversal_cost": 5000,
+          "max_fold_density": 0.65,
+          "max_latency_ms": 1500
+        },
+        "adapter_versions": ["dialect/rpd-csg@1.0.0", "overlay/text@1.0.0"]
+      },
+      "expected": {
+        "equivalent_commitment_class": true,
+        "lineage_gaps": 0
+      }
+    }
+  ]
+}

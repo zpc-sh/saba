@@ -20,6 +20,7 @@ Saba is also reflexive: building the hall itself is a first-class discourse acti
 - [Saba Conformance](docs/specifications/Saba-Conformance.md)
 - [Saba Project Starter](docs/specifications/Saba-Project-Starter.md)
 - [Saba Hall Build Loop](docs/specifications/Saba-Hall-Build-Loop.md)
+- [Saba Branch Policy](docs/specifications/Saba-Branch-Policy.md)
 
 ## Monthly Ritual
 

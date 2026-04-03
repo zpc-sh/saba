@@ -19,19 +19,46 @@
       "@container": "@set"
     }
   },
-  "@id": "saba:contract-matrix/2026-04-02",
+  "@id": "saba:contract-matrix/2026-04-03",
   "@type": "ContractMatrix",
   "name": "Saba Contract Matrix",
-  "description": "Machine-readable contract map for Saba CCV2 and RPD profile.",
-  "lastUpdated": "2026-04-02",
+  "description": "Machine-readable contract map for Saba spirit, CCV2, conformance, and branch convergence policy.",
+  "lastUpdated": "2026-04-03",
   "contracts": [
+    {
+      "@id": "saba:contract/spirit",
+      "@type": "InterfaceContract",
+      "name": "Saba Spirit",
+      "primaryRole": "Core purpose, monthly ritual, and opacity policy",
+      "status": "draft",
+      "specFile": "docs/specifications/Saba-Spirit.md"
+    },
     {
       "@id": "saba:contract/ccv2",
       "@type": "InterfaceContract",
       "name": "Saba CCV2",
       "primaryRole": "Artifact-first conversational computing umbrella",
       "status": "draft",
-      "specFile": "docs/specifications/Saba-CCV2.md"
+      "specFile": "docs/specifications/Saba-CCV2.md",
+      "dependsOn": ["saba:contract/spirit"]
+    },
+    {
+      "@id": "saba:contract/hall-build-loop",
+      "@type": "InterfaceContract",
+      "name": "Saba Hall Build Loop",
+      "primaryRole": "Reflexive protocol for building the hall through debate",
+      "status": "draft",
+      "specFile": "docs/specifications/Saba-Hall-Build-Loop.md",
+      "dependsOn": ["saba:contract/spirit", "saba:contract/ccv2"]
+    },
+    {
+      "@id": "saba:contract/branch-policy",
+      "@type": "InterfaceContract",
+      "name": "Saba Branch Policy",
+      "primaryRole": "Multi-agent branch lane policy for emergence and convergence",
+      "status": "draft",
+      "specFile": "docs/specifications/Saba-Branch-Policy.md",
+      "dependsOn": ["saba:contract/spirit", "saba:contract/hall-build-loop"]
     },
     {
       "@id": "saba:contract/schemas",
@@ -76,7 +103,30 @@
       "primaryRole": "Determinism/replay/archive conformance",
       "status": "draft",
       "specFile": "docs/specifications/Saba-Conformance.md",
-      "dependsOn": ["saba:contract/schemas", "saba:contract/operations", "saba:contract/rpd-profile"]
+      "dependsOn": [
+        "saba:contract/schemas",
+        "saba:contract/operations",
+        "saba:contract/rpd-profile",
+        "saba:contract/hall-build-loop"
+      ]
+    },
+    {
+      "@id": "saba:contract/conformance-vectors",
+      "@type": "InterfaceContract",
+      "name": "Saba Conformance Vectors",
+      "primaryRole": "Seed vectors for terminal fold, unfold, and archive/restart invariance",
+      "status": "draft",
+      "specFile": "docs/specifications/saba_conformance_vectors.json",
+      "dependsOn": ["saba:contract/conformance"]
+    },
+    {
+      "@id": "saba:contract/branch-policy-vectors",
+      "@type": "InterfaceContract",
+      "name": "Saba Branch Policy Vectors",
+      "primaryRole": "Machine-readable branch lane authority and escalation rules",
+      "status": "draft",
+      "specFile": "docs/specifications/saba_branch_policy.json",
+      "dependsOn": ["saba:contract/branch-policy"]
     }
   ]
 }

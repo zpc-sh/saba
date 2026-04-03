@@ -11,7 +11,8 @@
     "policy": "saba:policy",
     "threshold": "saba:threshold",
     "ritual": "saba:ritual",
-    "transparency": "saba:transparency"
+    "transparency": "saba:transparency",
+    "buildLoop": "saba:buildLoop"
   },
   "@id": "saba:bootstrap/2026-04-02",
   "@type": "saba:Bootstrap",
@@ -67,7 +68,18 @@
   "transparency": {
     "substrate_opacity_allowed": true,
     "authoritative_claims_require_lineage": true,
-    "cross_branch_claims_require_commitments": true
+    "cross_branch_claims_require_commitments": true,
+    "pierce_payload_minimum": [
+      "commitment_set",
+      "lineage_path",
+      "replay_l0_l2",
+      "policy_and_adapter_versions"
+    ]
+  },
+  "buildLoop": {
+    "self_hosting": true,
+    "merge_requires_lineage": true,
+    "required_cycle_outputs": ["nucleant", "crystal_or_defer_record"]
   },
   "threshold": {
     "max_branches": 800,

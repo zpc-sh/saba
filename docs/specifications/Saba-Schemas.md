@@ -7,7 +7,7 @@
 
 ## Summary
 
-This document defines canonical schema contracts for the Sabha profile.
+This document defines canonical schema contracts for the Saba profile.
 Shapes below are JSON-schema-like and intentionally implementation-neutral.
 
 ## 1) Identifiers

@@ -41,27 +41,33 @@ Defer:
 
 ## Contract Sources (Import First)
 
-1. `docs/specifications/Saba-CCV2.md`
-2. `docs/specifications/Saba-Schemas.md`
-3. `docs/specifications/Saba-Operations.md`
-4. `docs/specifications/Saba-Dialects.md`
-5. `docs/specifications/Saba-RPD-Profile.md`
-6. `docs/specifications/Saba-Conformance.md`
-7. `docs/specifications/contract_matrix.jsonld`
+1. `docs/specifications/Saba-Spirit.md`
+2. `docs/specifications/Saba-CCV2.md`
+3. `docs/specifications/Saba-Hall-Build-Loop.md`
+4. `docs/specifications/Saba-Schemas.md`
+5. `docs/specifications/Saba-Operations.md`
+6. `docs/specifications/Saba-Dialects.md`
+7. `docs/specifications/Saba-RPD-Profile.md`
+8. `docs/specifications/Saba-Conformance.md`
+9. `docs/specifications/contract_matrix.jsonld`
 
 ## Minimum Repo Layout
 
 ```text
 saba/
   docs/
-    specs/
-      CCV2.md
-      Sabha-Schemas.md
-      Sabha-Operations.md
-      Sabha-Dialects.md
-      Sabha-RPD-Profile.md
-      Sabha-Conformance.md
+    specifications/
+      Saba-Spirit.md
+      Saba-CCV2.md
+      Saba-Hall-Build-Loop.md
+      Saba-Schemas.md
+      Saba-Operations.md
+      Saba-Dialects.md
+      Saba-RPD-Profile.md
+      Saba-Conformance.md
       contract_matrix.jsonld
+      saba_bootstrap.jsonld
+      saba_conformance_vectors.json
   services/
     hall/
     smt/
@@ -90,6 +96,7 @@ saba/
 3. Add replay L3-L5 references.
 4. Add deterministic commitment vector tests.
 5. Add dialect adapter harness (at least 2 adapters).
+6. Add reflexive build-loop conformance vectors to CI gate.
 
 ## Day-30 Backlog
 
@@ -139,3 +146,4 @@ Rules:
 1. keep it artifact-first (nucleants/crystals/provenance/replay)
 2. no permanent winner semantics
 3. use this as adversarial persuasion stress testing for the hall
+4. enforce post-session crystallization before returning to normal mode
