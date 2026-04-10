@@ -61,6 +61,23 @@ defmodule Saba.Hall.Move do
     end
   end
 
+  validations do
+    validate fn changeset, _context ->
+      payload = Ash.Changeset.get_attribute(changeset, :payload) || %{}
+
+      if Saba.Hall.Policy.authoritative_cross_branch_claim?(payload) and
+           not Saba.Hall.Policy.pierce_payload_complete?(payload) do
+        {:error,
+         [
+           payload:
+             "cross-branch authoritative claims require commitment_set, lineage_path, replay(L0-L2), policy_version, and adapter_versions"
+         ]}
+      else
+        :ok
+      end
+    end
+  end
+
   attributes do
     attribute :id, :string, primary_key?: true, allow_nil?: false
     attribute :session_id, :string, allow_nil?: false

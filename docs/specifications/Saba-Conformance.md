@@ -1,7 +1,7 @@
 # Saba-Conformance: Test and Conformance Plan
 
 - Status: Draft
-- Last Updated: 2026-04-02
+- Last Updated: 2026-04-09
 - Owners: Saba Core, Avici Working Group
 - Related: Saba-CCV2.md, Saba-Schemas.md, Saba-Operations.md, Saba-Dialects.md
 
@@ -127,3 +127,4 @@ Minimum required vectors:
 1. `⊚` terminal-fold mapping to canonical fold payload
 2. `⊖ -> ⊕` unfold transition legality
 3. archive/restart invariance under fixed seed + policy + adapter versions
+4. cross-branch authoritative claim pierce payload completeness

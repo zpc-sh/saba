@@ -1,9 +1,9 @@
 # Saba-Operations: Operation and Service Contracts
 
 - Status: Draft
-- Last Updated: 2026-04-02
+- Last Updated: 2026-04-09
 - Owners: Saba Core, Avici Working Group
-- Related: Saba-CCV2.md, Saba-Schemas.md
+- Related: Saba-CCV2.md, Saba-Schemas.md, Saba-Hall-Build-Loop.md
 
 ## Summary
 
@@ -13,6 +13,7 @@ This document defines the operation membrane for the Saba profile:
 2. tree and branch operations
 3. archive/restart thresholds
 4. service boundaries
+5. reflexive build and pierceable-authority behavior
 
 Transport is implementation-specific. HTTP endpoint examples below are a reference binding, not a transport requirement.
 
@@ -252,3 +253,24 @@ When threshold is exceeded:
 1. SpecRequest/SpecMessage endpoints can mirror move logs and operator notes.
 2. Existing Git/content APIs (PGI/PCI) can transport residue artifacts and overlay projections.
 3. Existing Avici frame endpoints remain valid context suppliers for Hall session bootstrap.
+
+## 7) Reflexive Build and Pierce Protocol
+
+Saba implementation work is modeled as normal debate activity and must remain challengeable.
+
+Normative rules:
+
+1. build and architecture changes SHOULD be represented as move lineage, not out-of-band authority
+2. merge-affecting claims MUST include commitment refs and replay hooks
+3. private substrate reasoning is allowed, but authoritative cross-branch claims MUST be pierceable
+
+Pierce sequence (using existing moves):
+
+1. `challenge` requests authoritative evidence payload
+2. `unfold` reveals the bounded evidence slice when needed
+3. `clarify` binds overlays back to canonical SymbolForm refs
+4. missing payload downgrades claim authority until lineage is supplied
+
+Reference details:
+
+- [Saba-Hall-Build-Loop.md](./Saba-Hall-Build-Loop.md)

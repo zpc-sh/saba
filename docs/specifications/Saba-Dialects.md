@@ -1,7 +1,7 @@
 # Saba-Dialects: Dialect Adapter Contract
 
 - Status: Draft
-- Last Updated: 2026-04-02
+- Last Updated: 2026-04-09
 - Owners: Saba Core, Avici Working Group
 - Related: Saba-CCV2.md, Saba-Schemas.md, Saba-Conformance.md
 
@@ -48,6 +48,11 @@ Adapters MUST maintain:
 4. fold/fork ancestry traceability
 
 No adapter is allowed to mint authority claims without lineage.
+
+Opacity clause:
+
+1. adapters MAY preserve private native reasoning traces
+2. adapters MUST project a pierceable authority payload for cross-branch claims
 
 ## 4) Replay Equivalence Contract
 

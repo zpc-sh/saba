@@ -1,5 +1,5 @@
 {
-  "version": "2026-04-02",
+  "version": "2026-04-09",
   "profile": "saba-ccv2",
   "vectors": [
     {
@@ -53,6 +53,31 @@
       "expected": {
         "equivalent_commitment_class": true,
         "lineage_gaps": 0
+      }
+    },
+    {
+      "id": "authoritative-claim-pierce-payload",
+      "name": "Cross-branch authoritative claims include minimum pierce payload",
+      "input": {
+        "move_type": "assert",
+        "target_scope": "cross_branch",
+        "authoritative": true,
+        "payload": {
+          "claim_ref": "n_claim_01",
+          "commitment_set": ["h_a1", "h_a2"],
+          "lineage_path": ["mv_seed", "mv_assert_01"],
+          "replay": {
+            "L0": "Claim summary",
+            "L1": "Key claims",
+            "L2": "Event trace pointer"
+          },
+          "policy_version": "archive-policy@1.0.0",
+          "adapter_versions": ["dialect/rpd-csg@1.0.0"]
+        }
+      },
+      "expected": {
+        "pierce_payload_complete": true,
+        "authoritative_status": "allowed"
       }
     }
   ]
